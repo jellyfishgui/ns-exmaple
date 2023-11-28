@@ -6,9 +6,23 @@ import { ItemsComponent } from './item/items.component'
 import { ItemDetailComponent } from './item/item-detail.component'
 
 const routes: Routes = [
-  { path: '', redirectTo: '/items', pathMatch: 'full' },
-  { path: 'items', component: ItemsComponent },
-  { path: 'item/:id', component: ItemDetailComponent },
+  // { path: '', redirectTo: '/items', pathMatch: 'full' },
+  // { path: 'items', component: ItemsComponent },
+  // { path: 'item/:id', component: ItemDetailComponent },
+  {
+    path: '',
+    redirectTo: '/home',
+    pathMatch: 'full'
+  },
+  {
+    path: 'home',
+    loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
+  },
+  {
+    path: 'details/:id',
+    loadChildren: () =>
+      import('./home/details/details.module').then(m => m.DetailsModule)
+  }
 ]
 
 @NgModule({

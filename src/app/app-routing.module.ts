@@ -1,3 +1,4 @@
+import { LoginComponent } from './login/login.component';
 import { NgModule } from '@angular/core'
 import { Routes } from '@angular/router'
 import { NativeScriptRouterModule } from '@nativescript/angular'
@@ -22,6 +23,10 @@ const routes: Routes = [
     path: 'details/:id',
     loadChildren: () =>
       import('./home/details/details.module').then(m => m.DetailsModule)
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   }
 ]
 

@@ -20,4 +20,8 @@ export class HomeComponent {
   onFlickTap(args: ItemEventData): void {
     this.routerExtensions.navigate(['details', this.flicks[args.index].id])
   }
+
+  onLogin() : void {
+    this.routerExtensions.navigate(['login'])
+  }
 }

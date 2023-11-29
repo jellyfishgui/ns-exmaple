@@ -1,12 +1,12 @@
 {
     "NativescriptExtend.fileAssociations": [
         {
-            "systemId": "/Users/guimengkai/Research/ns-exmaple/schema/tns.xsd",
+            "systemId": "/home/marcos/workdata/research-workspace/ns-example/schema/tns.xsd",
             "pattern": "**/**/*.xml"
         },
         {
             "systemId": "http://www.w3.org/2001/XMLSchema.xsd",
-            "pattern": "/Users/guimengkai/Research/ns-exmaple/schema/tns.xsd"
+            "pattern": "/home/marcos/workdata/research-workspace/ns-example/schema/tns.xsd"
         }
     ],
     "files.exclude": {

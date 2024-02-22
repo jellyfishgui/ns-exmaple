@@ -5,4 +5,11 @@ import { Component } from '@angular/core';
   selector: 'ns-login',
   templateUrl: './login.component.html'
 })
-export class LoginComponent {}
+export class LoginComponent {
+
+  constructor() {}
+
+  login(): void {
+
+  }
+}

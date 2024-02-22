@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LoginService } from '~/app/login/login.service';
 
 @Component({
   moduleId: module.id,
@@ -7,9 +8,10 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
 
-  constructor() {}
+  constructor(private loginService: LoginService) {}
 
   login(): void {
-
+    console.error('This is login click');
+    this.loginService.login2();
   }
 }

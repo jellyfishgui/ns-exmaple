@@ -22,8 +22,9 @@ export class ApplicationConfigService {
 
   getEndpointFor(api: string, microservice?: string): string {
     if (microservice) {
-      return `${this.SERVER_API_URL}/${this.endpointPrefix}services/${microservice}/${api}`;
+      return `${this.endpointPrefix}services/${microservice}/${api}`;
     }
-    return `${this.SERVER_API_URL}/${this.endpointPrefix}${api}`;
+    console.error('env: ', process.env.MY_API_ENDPOINT, 'url', `${this.endpointPrefix}${api}`)
+    return `${this.endpointPrefix}${api}`;
   }
 }

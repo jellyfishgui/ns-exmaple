@@ -8,7 +8,7 @@ type JwtToken = {
   id_token: string;
 };
 
-@Injectable({ providedIn: 'root'})
+@Injectable({ providedIn: 'root' })
 export class AuthServerProvider {
 
   constructor(
@@ -25,6 +25,7 @@ export class AuthServerProvider {
   }
 
   login(credentials: Login): Observable<void> {
+    console.error(credentials)
     return this.http
       .post<JwtToken>(this.applicationConfigService.getEndpointFor('api/authenticate'), credentials)
       .pipe(map(response => this.authenticateSuccess(response, credentials.rememberMe)));
@@ -39,6 +40,7 @@ export class AuthServerProvider {
   }
 
   private authenticateSuccess(response: JwtToken, rememberMe: boolean): void {
+    console.error(response)
     const jwt = response.id_token;
     if (rememberMe) {
       this.localStorageService.store('authenticationToken', jwt);

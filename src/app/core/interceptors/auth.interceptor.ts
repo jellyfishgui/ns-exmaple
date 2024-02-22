@@ -4,7 +4,7 @@ import { LocalStorageService } from "ngx-webstorage";
 import { Observable } from "rxjs";
 
 @Injectable()
-export class AUthInterceptor implements HttpInterceptor {
+export class AuthInterceptor implements HttpInterceptor {
 
   constructor(
     private localStorageService: LocalStorageService

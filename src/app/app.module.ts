@@ -10,7 +10,6 @@ import { AppComponent } from './app.component';
 import { ItemDetailComponent } from './item/item-detail.component';
 import { ItemsComponent } from './item/items.component';
 import { LoginComponent } from './login/login.component';
-g
 
 @NgModule({
   bootstrap: [AppComponent],
